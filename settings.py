@@ -30,5 +30,5 @@ leave = True
 leave_mes=u'Пока!'
 
 #[gamebot settings]
-album='183156791_245737307'
-lives=5
+album=os.environ.get('album','183156791_245737307')
+lives=int(os.environ.get('lives',5))

@@ -20,6 +20,16 @@
       "description": "App name (enter the same name as in field 'App name')",
       "value": "",
       "required": true
+    },
+    "lives": {
+      "description": "Count of user lives",
+      "value": "",
+      "required": true
+    },
+    "album": {
+      "description": "Album id",
+      "value": "",
+      "required": true
     }
 
   },
