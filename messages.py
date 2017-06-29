@@ -99,7 +99,7 @@ class MessageModule:
         except TypeError:
             attachments = []
 
-
+        user = utils.getusers(id=user_id)
         if len(user) < 1:
             utils.insert_users(id=user_id, member=self.api.groups.isMember(group_id=settings.group_id, user_id=user_id), mesallow=0, time=0, game=0, lives=settings.lives, score=0,
                                pics='[]', answer='')
