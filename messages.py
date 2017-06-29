@@ -11,7 +11,8 @@ def answers(helper,text,user_id,attachments,message,user):
 
     if u'начать игру' in text or u'продолж' in text:
         if len(user) <1:
-            utils.insert_users(id=user_id,game=1)
+            utils.insert_users(id=user_id,member=helper.api.groups.isMember(group_id=settings.group_id, user_id=user_id), mesallow=0, time=0, game=1, lives=settings.lives, score=0,
+                               pics='[]', answer='')
             user = utils.getusers(id=user_id)
         if user[0]['time'] > time.time() or user[0]['lives'] <= 0:
             helper.send_message(user_id=user_id, message=u'У тебя зкончились жизни, подожди 24 часа.')
@@ -68,6 +69,9 @@ def answers(helper,text,user_id,attachments,message,user):
         else:
             helper.send_message(user_id=user_id, message=u'Я тебя не понимаю! Если хочешь сыграть в игру, напиши "начать игру". \nИли же "счет" или "жизни" чтобы узнать свою статистику')
             return
+    helper.send_message(user_id=user_id,
+                        message=u'Я тебя не понимаю! Если хочешь сыграть в игру, напиши "начать игру". \nИли же "счет" или "жизни" чтобы узнать свою статистику')
+    return
 class MessageModule:
     def __init__(self,api):
         self.api = api
