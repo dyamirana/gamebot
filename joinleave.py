@@ -29,7 +29,10 @@ class JoinLeave:
         try:
             if settings.leave:
                 user_id = user.user_id
-                utils.insert_users(id=user_id,member=0,mesallow=0,time=0)
+                if len(utils.getusers(id=user_id)) < 1:
+                    utils.insert_users(id=user_id,member=0,mesallow=0,time=0,game=0,lives=settings.lives,score=0,pics='[]',answer='')
+                else:
+                    utils.insert_users(id=user_id,member=0,mesallow=0)
                 if self.api.messages.isMessagesFromGroupAllowed(group_id=settings.group_id,user_id=user_id)['is_allowed'] == 1:
                     utils.insert_users(id=user_id, mesallow=1)
                     self.send_message(user_id=user_id,message=settings.leave_mes)
