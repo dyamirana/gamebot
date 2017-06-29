@@ -1,7 +1,7 @@
 {
   "name": "Gamebot",
   "description": "VKbot",
-  "repository": "https://github.com/dyamirana/horobot",
+  "repository": "https://github.com/dyamirana/gamebot",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/2000px-VK.com-logo.svg.png",
   "keywords": ["node", "express", "static"],
   "formation": {
