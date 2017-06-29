@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import pytz
-import datetime
+
+
 import vk
 import utils
 import ast
