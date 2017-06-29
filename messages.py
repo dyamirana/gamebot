@@ -102,14 +102,16 @@ class MessageModule:
         if settings.joinpls != '':
             if len(user)<1:
                 if self.api.groups.isMember(group_id=settings.group_id, user_id=user_id) == 0:
-                    utils.insert_users(id=user_id, member=0, mesallow=1)
+                    utils.insert_users(id=user_id, member=0, mesallow=1, time=0, game=0, lives=settings.lives, score=0,
+                               pics='[]', answer='')
                     self.send_message(user_id=user_id, message=settings.joinpls)
                     return
                 else:
                     utils.insert_users(id=user_id, member=1, mesallow=1)
 
             elif self.api.groups.isMember(group_id=settings.group_id, user_id=user_id) == 0:
-                utils.insert_users(id=user_id, member=0, mesallow=1, time=0)
+                utils.insert_users(id=user_id, member=0, mesallow=1, time=0, game=0, lives=settings.lives, score=0,
+                               pics='[]', answer='')
                 self.send_message(user_id=user_id, message=settings.joinpls)
                 return
 
