@@ -22,7 +22,7 @@ class dotdict(dict):
 
 def getusers(id=None):
     if settings.db:
-        db = dataset.connect(settings.db_url,{'pool_recycle': 30})
+        db = dataset.connect(settings.db_url,engine_kwargs={'pool_recycle': 30})
         table = db['users']
         if table.count()<1:
             return []
@@ -51,7 +51,7 @@ def getusers(id=None):
 
 def insert_users(id,**kwargs):
     if settings.db:
-        db = dataset.connect(settings.db_url, {'pool_recycle': 30})
+        db = dataset.connect(settings.db_url, engine_kwargs={'pool_recycle': 30})
         table = db['users']
         kwargs.update({'id':id})
         table.upsert(kwargs,['id'])
