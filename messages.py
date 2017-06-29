@@ -46,7 +46,7 @@ def answers(helper,text,user_id,attachments,message,user):
                 return
             if text == user[0]['answer']:
                 utils.insert_users(id=user_id, score=user[0]['score'] + user[0]['lives'],game=0,answer='')
-                helper.send_message(user_id=user_id, message=u'Верно!'+u'\nТвой счет: '+str(user[0]['score'] + user[0]['lives'])+u'\nЧтобы продолжить игру напиши "продолжить"')
+                helper.send_message(user_id=user_id, message=u'Верно!'+u'\nТвой счет: '+str(user[0]['score'])+u'\nЧтобы продолжить игру напиши "продолжить"')
                 return
             else:
                 lives = user[0]['lives'] - 1

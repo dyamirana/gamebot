@@ -9,7 +9,7 @@ token = os.environ.get('token','740f3f24062cf595ba12a8e5862c270814f4a5d7d7ab2a40
 
 
 #[platform settings]
-db=True
+db=False
 debug=True
 if 'DATABASE_URL' in os.environ:
     db_url=os.environ.get('DATABASE_URL')
@@ -22,7 +22,7 @@ else:
 
 #[join-leave module]
 join = True
-join_mes=u'Привет!'
+join_mes=u'Cпасибо за подписку! Чтобы начать игру напиши "начать игру"'
 
 joinpls=u'Чтобы поиграть ты должен вступить в группу'
 
