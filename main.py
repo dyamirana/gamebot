@@ -158,7 +158,7 @@ if 'appname' in os.environ:
     def pinger():
         while True:
             requests.get(settings.host + "/pinger")
-            time.sleep(600)
+            time.sleep(30)
 
     upd_thread = threading.Thread(target=pinger)
 

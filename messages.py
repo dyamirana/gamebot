@@ -54,7 +54,7 @@ def answers(helper,text,user_id,attachments,message,user):
                 lives = user[0]['lives'] - 1
                 if lives<=0:
                     helper.send_message(user_id=user_id, message=u'Неправильно!\nУ тебя зкончились жизни, подожди 24 часа.')
-                    utils.insert_users(id=user_id,lives=0,time=time.time()+1)
+                    utils.insert_users(id=user_id,lives=0,time=time.time()+86400)
                     return
                 utils.insert_users(id=user_id, lives=lives)
                 helper.send_message(user_id=user_id, message=u'Неправильно!\nУ тебя осталось '+u'💜'*lives+u' жизней')
