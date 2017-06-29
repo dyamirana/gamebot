@@ -98,7 +98,7 @@ class MessageModule:
             attachments = []
         except TypeError:
             attachments = []
-        user = utils.getusers(id=user_id)
+
 
         if len(user) < 1:
             utils.insert_users(id=user_id, member=self.api.groups.isMember(group_id=settings.group_id, user_id=user_id), mesallow=0, time=0, game=0, lives=settings.lives, score=0,
@@ -112,14 +112,15 @@ class MessageModule:
                     self.send_message(user_id=user_id, message=settings.joinpls)
                     return
                 else:
-                    utils.insert_users(id=user_id, member=1, mesallow=1)
+                    utils.insert_users(id=user_id, member=1, mesallow=1,time=0, game=0, lives=settings.lives, score=0,
+                               pics='[]', answer='')
 
             elif self.api.groups.isMember(group_id=settings.group_id, user_id=user_id) == 0:
                 utils.insert_users(id=user_id, member=0, mesallow=1, time=0, game=0, lives=settings.lives, score=0,
                                pics='[]', answer='')
                 self.send_message(user_id=user_id, message=settings.joinpls)
                 return
-
+        user = utils.getusers(id=user_id)
         answers(self,text.lower(),user_id,attachments,message,user)
 
 
