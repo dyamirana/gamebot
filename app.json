@@ -37,5 +37,14 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
     }
+  ],
+  "addons": [
+    "openredis",
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.6"
+      }
+    }
   ]
 }
