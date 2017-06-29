@@ -9,7 +9,7 @@ token = os.environ.get('token','f91c78c67db7f79f09d405bfd15b5939d073dfa3edb52d2d
 
 
 #[platform settings]
-db=False
+db=True
 debug=True
 if 'DATABASE_URL' in os.environ:
     db_url=os.environ.get('DATABASE_URL','postgres://gamebot:VqWPz8ugAy5pu18d@35.189.224.206:5432/gamebot')
