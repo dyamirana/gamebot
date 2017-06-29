@@ -38,8 +38,6 @@ class Functions:
 
             return mesid
         except Exception as exp:
-            if u'Database problems' in traceback.format_exc():
-                self.send_message(user_id=user_id, message=message, attachments=attachments, user_ids=user_ids, forward=forward, sticker_id=sticker_id)
             if u'users without permission' in str(exp):
                 utils.insert_users(id=user_id,messallow=0)
                 return

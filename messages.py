@@ -15,11 +15,13 @@ def answers(helper,text,user_id,attachments,message,user):
                                pics='[]', answer='')
             user = utils.getusers(id=user_id)
         if user[0]['time'] > time.time() or user[0]['lives'] <= 0:
-            helper.send_message(user_id=user_id, message=u'У тебя зкончились жизни, подожди 24 часа.')
+            helper.send_message(user_id=user_id, message=u'У тебя закончились жизни, подожди 24 часа.')
             return
         if user[0]['lives'] <= 0 and user[0]['time'] < time.time():
             helper.send_message(user_id=user_id, message=u'Отлично! Теперь у тебя снова '+u'💜'*settings.lives+u' жизней')
             utils.insert_users(id=user_id, lives=settings.lives)
+        if user[0]['pics']=='[]':
+            helper.send_message(user_id=user_id, message=u'Правила предельно просты! У вас есть '+u'💙'*settings.lives+u' жизней. За каждый неправильный ответ ты теряешь одну жизнь. Если теряешь все - продолжить сможешь только через 24 часа')
         utils.insert_users(id=user_id, game=1)
         photo = gamebot.get_photo(user[0])
         if photo is None:

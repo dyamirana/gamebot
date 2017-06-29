@@ -4,15 +4,15 @@ import urlparse
 
 
 #[vk settings]
-group_id=os.environ.get('groupid',141410969)
-token = os.environ.get('token','740f3f24062cf595ba12a8e5862c270814f4a5d7d7ab2a4001c5c45438d1881dea2d3d79124b4d0b670aa')
+group_id=os.environ.get('groupid',149222864)
+token = os.environ.get('token','f91c78c67db7f79f09d405bfd15b5939d073dfa3edb52d2d0439b8eba73b800e2bc30fc0e4aaa3d810287')
 
 
 #[platform settings]
 db=False
 debug=True
 if 'DATABASE_URL' in os.environ:
-    db_url=os.environ.get('DATABASE_URL')
+    db_url=os.environ.get('DATABASE_URL','postgres://gamebot:VqWPz8ugAy5pu18d@35.189.224.206:5432/gamebot')
 else:
     db_url = 'sqlite:////' + os.path.dirname(__file__) + '/databases/users.db'
 if 'appname' in os.environ:
@@ -27,7 +27,7 @@ join_mes=u'Cпасибо за подписку! Чтобы начать игру
 joinpls=u'Чтобы поиграть ты должен вступить в группу'
 
 leave = True
-leave_mes=u'Пока!'
+leave_mes=u'Эх , зря. Теперь я не смогу тебе прислать новое отличие, которое уже готовится для тебя и почти готово 😔\nМожет, подпишешься обратно?😋'
 
 #[gamebot settings]
 album=os.environ.get('album','183156791_245737307')

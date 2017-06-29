@@ -16,5 +16,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://ec2-54-247-99-159.eu-west-1.compute.amazonaws.com:5432/d3onq362eei4jo?sslmode=require</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="gamebot@35.189.224.206" uuid="7a921655-af48-4dc6-954b-9e12448df401">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://35.189.224.206:5432/gamebot</jdbc-url>
+    </data-source>
   </component>
 </project>
