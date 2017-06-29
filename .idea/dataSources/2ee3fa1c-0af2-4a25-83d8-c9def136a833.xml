@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="users.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="sqlite_master"/>
+    <table id="4" parent="2" name="users"/>
+    <column id="5" parent="3" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="6" parent="3" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="7" parent="3" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="8" parent="3" name="rootpage">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="9" parent="3" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="10" parent="4" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="11" parent="4" name="member">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="12" parent="4" name="mesallow">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="13" parent="4" name="time">
+      <Position>3</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="14" parent="4" name="game">
+      <Position>4</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="15" parent="4" name="lives">
+      <Position>5</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="16" parent="4" name="score">
+      <Position>6</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="17" parent="4" name="pics">
+      <Position>7</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <column id="18" parent="4" name="answer">
+      <Position>8</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <index id="19" parent="4" name="ix_users_87ea5dfc8b8e384d">
+      <ColNames>id</ColNames>
+    </index>
+    <key id="20" parent="4">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>ix_users_87ea5dfc8b8e384d</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
