@@ -4,6 +4,12 @@
   "repository": "https://github.com/dyamirana/horobot",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/2000px-VK.com-logo.svg.png",
   "keywords": ["node", "express", "static"],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
   "env": {
     "groupid": {
       "description": "Id of vk group)",
@@ -39,7 +45,6 @@
     }
   ],
   "addons": [
-    "openredis",
     {
       "plan": "heroku-postgresql",
       "options": {
